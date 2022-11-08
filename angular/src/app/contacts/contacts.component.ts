@@ -6,6 +6,7 @@ import { UIState } from '../services';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
+  styleUrls: ['./contacts.component.css'],
 })
 export class ContactsComponent implements OnInit {
   public items: any[];
@@ -20,6 +21,7 @@ export class ContactsComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.items = [{ID:5, name:'Sondre'}, {ID:1, name:'Lu'}];
     this.contacts = this.contactStore.all().sort((a, b) => (a.name > b.name ? 1 : -1));
+  
   }
 
   deleteContacts() {

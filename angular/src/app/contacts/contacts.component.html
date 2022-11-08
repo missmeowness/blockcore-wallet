@@ -23,7 +23,7 @@
   <p class="dimmed">{{ "AddressBook.AddressBookHint" | translate }}</p>
 
   <p>If you click the delete button all your contacts will be delete</p>
-  <div *ngFor="let item of items">
+  <div *ngFor="let item of items" class="contact-name">
     Mr. {{item.name}} {{item.ID}}
   </div>
 
