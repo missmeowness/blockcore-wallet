@@ -8,6 +8,7 @@ import { UIState } from '../services';
   templateUrl: './contacts.component.html',
 })
 export class ContactsComponent implements OnInit {
+  public items: any[];
   public contacts: Contact[];
 
   constructor(private uiState: UIState, private contactStore: ContactStore) {
@@ -17,6 +18,7 @@ export class ContactsComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
+    this.items = [{ID:5, name:'Sondre'}, {ID:1, name:'Lu'}];
     this.contacts = this.contactStore.all().sort((a, b) => (a.name > b.name ? 1 : -1));
   }
 
