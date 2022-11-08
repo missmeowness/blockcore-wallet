@@ -21,4 +21,10 @@
   </div>
   <br /><br />
   <p class="dimmed">{{ "AddressBook.AddressBookHint" | translate }}</p>
+
+  <p>If you click the delete button all your contacts will be delete</p>
+
+  <mat-icon fontIcon="person_remove"></mat-icon>
+
+  <button mat-stroked-button (click)="deleteContacts()" color="warn">Delete all contacts</button>
 </div>

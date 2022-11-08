@@ -19,4 +19,8 @@ export class ContactsComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.contacts = this.contactStore.all().sort((a, b) => (a.name > b.name ? 1 : -1));
   }
+
+  deleteContacts() {
+    alert('Are you sure you want to delete all your contacts?');
+  }
 }
